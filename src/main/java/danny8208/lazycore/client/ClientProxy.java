@@ -1,6 +1,7 @@
 package danny8208.lazycore.client;
 
 import danny8208.lazycore.common.CommonProxy;
+import danny8208.lazycore.common.items.ModItems;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,6 +16,6 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public static void initModels(ModelRegistryEvent event) {
-
+        ModItems.registerModels();
     }
 }
