@@ -1,0 +1,21 @@
+item.bronze_ingot.name=Bronze Ingot
+item.tin_ingot.name=Tin Ingot
+item.copper_ingot.name=Copper Ingot
+item.tungsten_ingot=Tungsten Ingot
+item.steel_ingot.name=Steel Ingot
+
+item.copper_nugget.name=Copper Nugget
+item.bronze_nugget.name=Bronze Nugget
+item.tin_nugget.name=Tin Nugget
+item.tungsten_nugget.name=Tungsten Nugget
+item.steel_nugget.name=Steel Nugget
+
+tile.copper_block.name=Copper Block
+tile.tin_block.name=Tin Block
+tile.bronze_block.name=Bronze Block
+tile.tungsten_block.name=Tungsten Block
+tile.steel_block.name=Steel Block
+
+tile.copper_ore.name=Copper Ore
+tile.tin_ore.name=Tin Block
+tile.tungsten_ore.name=Tungsten Ore
