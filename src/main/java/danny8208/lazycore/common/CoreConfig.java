@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Level;
 
 public class CoreConfig {
     public static boolean enableBronzeIngot = true;
+    public static boolean enableTinIngot = true;
 
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
