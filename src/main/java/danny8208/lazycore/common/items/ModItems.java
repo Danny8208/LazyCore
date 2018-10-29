@@ -9,9 +9,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModItems {
     @GameRegistry.ObjectHolder("bronze_ingot")
     public static IngotBronze ingotBronze = new IngotBronze();
+    
+    @GameRegistry.ObjectHolder("tin_ingot")
+    public static IngotTin ingotTin = new IngotTin();
 
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
         ingotBronze.registerModel();
+        ingotTin.registerModel();
     }
 }
