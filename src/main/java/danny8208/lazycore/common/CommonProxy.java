@@ -32,7 +32,8 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void initItems(RegistryEvent.Register<Item> event) {
-        if( CoreConfig.enableBronzeIngot) event.getRegistry().register(ModItems.ingotBronze);
+        if(CoreConfig.enableBronzeIngot) event.getRegistry().register(ModItems.ingotBronze);
+        if(CoreConfig.enableTinIngot) event.getRegistry().register(ModItems.ingotTin);
     }
 
     @SubscribeEvent
