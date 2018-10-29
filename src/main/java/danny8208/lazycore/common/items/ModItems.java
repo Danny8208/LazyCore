@@ -12,10 +12,14 @@ public class ModItems {
     
     @GameRegistry.ObjectHolder("tin_ingot")
     public static IngotTin ingotTin = new IngotTin();
+    
+    @GameRegistry.ObjectHolder("copper_ingot")
+    public static IngotCopper ingotCopper = new IngotCopper();
 
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
         ingotBronze.registerModel();
         ingotTin.registerModel();
+        ingotCopper.registerModel();
     }
 }
