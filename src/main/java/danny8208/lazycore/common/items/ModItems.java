@@ -16,10 +16,18 @@ public class ModItems {
     @GameRegistry.ObjectHolder("copper_ingot")
     public static IngotCopper ingotCopper = new IngotCopper();
 
+    @GameRegistry.ObjectHolder("steel_ingot")
+    public static IngotSteel ingotSteel = new IngotSteel();
+
+    @GameRegistry.ObjectHolder("tungsten_ingot")
+    public static IngotTungsten ingotTungsten = new IngotTungsten();
+
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
         ingotBronze.registerModel();
         ingotTin.registerModel();
         ingotCopper.registerModel();
+        ingotSteel.registerModel();
+        ingotTungsten.registerModel();
     }
 }
