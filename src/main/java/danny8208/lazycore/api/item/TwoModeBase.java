@@ -34,7 +34,7 @@ public class TwoModeBase extends ItemBase {
             }
         });
     }
-    private boolean isActive(ItemStack stack) {
+    public boolean isActive(ItemStack stack) {
         return getTagCompoundSafe(stack).hasKey("active");
     }
 
