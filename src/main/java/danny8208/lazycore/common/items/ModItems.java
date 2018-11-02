@@ -22,6 +22,22 @@ public class ModItems {
     @GameRegistry.ObjectHolder("tungsten_ingot")
     public static IngotTungsten ingotTungsten = new IngotTungsten();
 
+    @GameRegistry.ObjectHolder("bronze_nugget")
+    public static NuggetBronze nuggetBronze = new NuggetBronze();
+
+    @GameRegistry.ObjectHolder("tin_nugget")
+    public static NuggetTin nuggetTin = new NuggetTin();
+
+    @GameRegistry.ObjectHolder("copper_nugget")
+    public static NuggetCopper nuggetCopper = new NuggetCopper();
+
+    @GameRegistry.ObjectHolder("tungsten_nugget")
+    public static NuggetTungsten nuggetTungsten = new NuggetTungsten();
+
+    @GameRegistry.ObjectHolder("steel_nugget")
+    public static NuggetSteel nuggetSteel = new NuggetSteel();
+
+
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
         ingotBronze.registerModel();

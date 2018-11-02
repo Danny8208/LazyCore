@@ -37,6 +37,12 @@ public class CommonProxy {
         if(CoreConfig.enableCopperIngot) event.getRegistry().register(ModItems.ingotCopper);
         if(CoreConfig.enableSteelIngot) event.getRegistry().register(ModItems.ingotSteel);
         if(CoreConfig.enableTungstenIngot) event.getRegistry().register(ModItems.ingotTungsten);
+
+        if(CoreConfig.enableBronzeNugget) event.getRegistry().register(ModItems.nuggetBronze);
+        if(CoreConfig.enableCopperNugget) event.getRegistry().register(ModItems.nuggetCopper);
+        if(CoreConfig.enableTinNugget) event.getRegistry().register(ModItems.nuggetTin);
+        if(CoreConfig.enableSteelNugget) event.getRegistry().register(ModItems.nuggetSteel);
+        if(CoreConfig.enableTungstenNugget) event.getRegistry().register(ModItems.nuggetTungsten);
     }
 
     @SubscribeEvent
