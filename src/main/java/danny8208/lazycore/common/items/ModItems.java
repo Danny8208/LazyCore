@@ -45,5 +45,11 @@ public class ModItems {
         ingotCopper.registerModel();
         ingotSteel.registerModel();
         ingotTungsten.registerModel();
+
+        nuggetBronze.registerModel();
+        nuggetTin.registerModel();
+        nuggetCopper.registerModel();
+        nuggetSteel.registerModel();
+        nuggetTungsten.registerModel();
     }
 }

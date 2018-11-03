@@ -1,7 +1,5 @@
 package danny8208.lazycore.common;
 
-import danny8208.lazycore.common.items.ModItems;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

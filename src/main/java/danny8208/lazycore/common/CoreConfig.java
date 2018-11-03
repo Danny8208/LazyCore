@@ -26,10 +26,31 @@ public class CoreConfig {
     public static boolean enableTinOre = true;
     public static boolean enableTungstenOre = true;
 
+    public static float hardnessCopperOre = 3;
+    public static float hardnessTinOre = 3;
+    public static float hardnessTungstenOre = 3;
+
+    public static float hardnessCopperBlock = 5;
+    public static float hardnessTinBlock = 5;
+    public static float hardnessBronzeBlock = 5;
+    public static float hardnessSteelBlock = 5;
+    public static float hardnessTungstenBlock = 5;
+
+    public static float resistanceCopperOre = 15;
+    public static float resistanceTinOre = 15;
+    public static float resistanceTungstenOre = 15;
+
+    public static float resistanceCopperBlock = 30;
+    public static float resistanceTinBlock = 30;
+    public static float resistanceBronzeBlock = 30;
+    public static float resistanceSteelBlock = 30;
+    public static float resistanceTungstenBlock = 30;
+
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
             cfg.load();
+            enableItems(cfg);
         }   catch (Exception e1) {
             LazyCore.logger.log(Level.ERROR, "Problem with loading config file");
         } finally {
