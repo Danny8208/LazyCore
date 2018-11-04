@@ -13,7 +13,7 @@ import java.util.Random;
 public class CustomOreGen implements IWorldGenerator {
     /*
     an example of overriding the generate methods will be something like this:
-    generateOre(ModBlocks.block.getDefaultState, world, random, chunkX * 16, chunkZ * 16, , minY, maxY, minClusterSize + random.nextInt(maxClusterSize - minClusterSize), chances)
+    generateOre(ModBlocks.block.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, minY, maxY, minClusterSize + random.nextInt(maxClusterSize - minClusterSize), chances);
      */
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
@@ -28,11 +28,11 @@ public class CustomOreGen implements IWorldGenerator {
         }
     }
 
-    protected void generateOverworld(Random random, int chunkX, int chunkY, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
+    protected void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
 
-    protected void generateNether(Random random, int chunkX, int chunkY, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
+    protected void generateNether(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
 
-    protected void generateEnd(Random random, int chunkX, int chunkY, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
+    protected void generateEnd(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {}
 
     protected void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) {
         int deltaY = maxY - minY;

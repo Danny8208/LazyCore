@@ -2,6 +2,7 @@ package danny8208.lazycore.common;
 
 import danny8208.lazycore.common.block.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
+import danny8208.lazycore.common.world.OreGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.io.File;
 
@@ -23,6 +25,8 @@ public class CommonProxy {
         File dir = e.getModConfigurationDirectory();
         config = new Configuration(new File(dir.getPath(), LazyCore.MOD_ID + ".cfg"));
         CoreConfig.readConfig();
+
+        GameRegistry.registerWorldGenerator(new OreGeneration(), 3);
     }
 
     public void init(FMLInitializationEvent e) {

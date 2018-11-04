@@ -46,6 +46,18 @@ public class CoreConfig {
     public static float resistanceSteelBlock = 30;
     public static float resistanceTungstenBlock = 30;
 
+    public static int maxYCopper = 70;
+
+    public static int minYCopper = 10;
+
+    public static int chancesCopper = 10;
+
+    public static int maxClumpCopper = 10;
+
+    public static int minClumpCopper = 1;
+
+    public static boolean enableCopperOreGen = true;
+
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
