@@ -2,7 +2,7 @@ package danny8208.lazycore.common;
 
 import danny8208.lazycore.common.block.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
-import danny8208.lazycore.common.world.OreGeneration;
+import danny8208.lazycore.common.world.CopperGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -26,7 +26,7 @@ public class CommonProxy {
         config = new Configuration(new File(dir.getPath(), LazyCore.MOD_ID + ".cfg"));
         CoreConfig.readConfig();
 
-        GameRegistry.registerWorldGenerator(new OreGeneration(), 3);
+        if(CoreConfig.enableCopperOreGen) GameRegistry.registerWorldGenerator(new CopperGen(), CoreConfig.weightCopper);
     }
 
     public void init(FMLInitializationEvent e) {

@@ -58,6 +58,8 @@ public class CoreConfig {
 
     public static boolean enableCopperOreGen = true;
 
+    public static int weightCopper = 3;
+
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
