@@ -3,6 +3,7 @@ package danny8208.lazycore.common;
 import danny8208.lazycore.common.block.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
 import danny8208.lazycore.common.world.CopperGen;
+import danny8208.lazycore.common.world.TinGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -27,6 +28,7 @@ public class CommonProxy {
         CoreConfig.readConfig();
 
         if(CoreConfig.enableCopperOreGen) GameRegistry.registerWorldGenerator(new CopperGen(), CoreConfig.weightCopper);
+        if(CoreConfig.enableTinOreGen) GameRegistry.registerWorldGenerator(new TinGen(), CoreConfig.weightTin);
     }
 
     public void init(FMLInitializationEvent e) {
