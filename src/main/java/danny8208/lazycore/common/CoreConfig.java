@@ -4,6 +4,28 @@ import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Level;
 
 public class CoreConfig {
+    private static final String COMMENT_ENABLE = "Set to true in order to enable this";
+    private static final String COMMENT_RESISTANCE = "The resistance of the block. You should only change if you feel like it";
+    private static final String COMMENT_HARDNESS = "The hardness of the block. You should only change if you feel like it";
+    private static final String COMMENT_WEIGHT = "The weight of the ore, or where it is most commonly found";
+
+    private static final String CATEGORY_ENABLE_ITEMS = "item enable";
+    private static final String CATEGORY_ENABLE_BLOCKS = "block enable";
+    private static final String CATEGORY_ENABLE_ORES = "ore enable";
+    private static final String CATEGORY_ENABLE_ORE_GEN = "ore gen enable";
+
+    private static final String CATEGORY_HARDNESS_BLOCKS = "block hardness";
+    private static final String CATEGORY_HARDNESS_ORES = "ore hardness";
+
+    private static final String CATEGORY_RESISTANCE_BLOCKS = "block resistance";
+    private static final String CATEGORY_RESISTANCE_ORES = "ore resistance";
+
+    private static final String CATEGORY_WEIGHT_ORES = "ore weight";
+
+    private static final int MIN_WEIGHT = 1;
+
+    private static final int MAX_WEIGHT = 6;
+
     public static boolean enableBronzeIngot = true;
     public static boolean enableTinIngot = true;
     public static boolean enableCopperIngot = true;
@@ -60,7 +82,7 @@ public class CoreConfig {
 
     public static int maxClumpCopper = 10;
     public static int maxClumpTin = 7;
-    public static int maxClumpTunsten = 0;
+    public static int maxClumpTungsten = 0;
 
     public static int minClumpCopper = 1;
     public static int minClumpTin = 1;
@@ -68,7 +90,7 @@ public class CoreConfig {
 
     public static boolean enableCopperOreGen = true;
     public static boolean enableTinOreGen = true;
-    public static boolean enableTungstenOreGen = true;
+    public static boolean enableTungstenOreGen = false;
 
     public static int weightCopper = 3;
     public static int weightTin = 2;
@@ -79,6 +101,14 @@ public class CoreConfig {
         try {
             cfg.load();
             enableItems(cfg);
+            enableBlocks(cfg);
+            enableOres(cfg);
+            enableOreGen(cfg);
+            hardnessBlocks(cfg);
+            hardnessOre(cfg);
+            resistanceBlocks(cfg);
+            resistanceOre(cfg);
+            oreWeight(cfg);
         }   catch (Exception e1) {
             LazyCore.logger.log(Level.ERROR, "Problem with loading config file");
         } finally {
@@ -88,5 +118,35 @@ public class CoreConfig {
         }
     }
 
-    private static void enableItems(Configuration cfg) {}
+    private static void enableItems(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_ENABLE_ITEMS, COMMENT_ENABLE);
+    }
+    private static void enableBlocks(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_ENABLE_BLOCKS, COMMENT_ENABLE);
+    }
+    private static void enableOres(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_ENABLE_ORES, COMMENT_ENABLE);
+    }
+    private static void enableOreGen(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_ENABLE_ORE_GEN, COMMENT_ENABLE);
+    }
+
+    private static void hardnessBlocks(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_HARDNESS_BLOCKS, COMMENT_HARDNESS);
+    }
+    private static void hardnessOre(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_HARDNESS_ORES, COMMENT_HARDNESS);
+    }
+
+    private static void resistanceBlocks(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_RESISTANCE_BLOCKS, COMMENT_RESISTANCE);
+    }
+    private static void resistanceOre(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_RESISTANCE_ORES, COMMENT_RESISTANCE);
+    }
+
+    private static void oreWeight(Configuration cfg) {
+        cfg.addCustomCategoryComment(CATEGORY_WEIGHT_ORES, "where you can change the weight of ores that generate");
+        weightCopper = cfg.getInt("copper weight", CATEGORY_WEIGHT_ORES, weightCopper, MIN_WEIGHT, MAX_WEIGHT, COMMENT_WEIGHT);
+    }
 }
