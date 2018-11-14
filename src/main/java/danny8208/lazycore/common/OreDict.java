@@ -1,5 +1,6 @@
 package danny8208.lazycore.common;
 
+import danny8208.lazycore.common.block.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -18,5 +19,16 @@ public class OreDict {
         OreDictionary.registerOre("nuggetTin", ModItems.nuggetTin);
         OreDictionary.registerOre("nuggetSteel", ModItems.nuggetSteel);
         OreDictionary.registerOre("nuggetTungsten", ModItems.nuggetTungsten);
+    }
+
+    public static void blockDict() {
+        OreDictionary.registerOre("blockCopper", ModBlocks.blockCopper);
+        OreDictionary.registerOre("blockTin", ModBlocks.blockTin);
+        OreDictionary.registerOre("blockBronze", ModBlocks.blockBronze);
+        OreDictionary.registerOre("blockTungsten", ModBlocks.blockTungsten);
+    }
+
+    public static void oreDict() {
+        
     }
 }
