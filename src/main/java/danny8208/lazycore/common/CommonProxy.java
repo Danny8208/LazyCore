@@ -36,6 +36,8 @@ public class CommonProxy {
     public void init(FMLInitializationEvent e) {
         OreDict.nuggetDict();
         OreDict.ingotDict();
+        OreDict.blockDict();
+        OreDict.oreDict();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

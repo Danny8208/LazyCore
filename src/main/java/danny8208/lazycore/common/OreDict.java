@@ -29,6 +29,8 @@ public class OreDict {
     }
 
     public static void oreDict() {
-        
+        OreDictionary.registerOre("oreCopper", ModBlocks.oreCopper);
+        OreDictionary.registerOre("oreTin", ModBlocks.oreTin);
+        OreDictionary.registerOre("oreTungsten", ModBlocks.oreTungsten);
     }
 }
