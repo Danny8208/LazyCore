@@ -148,5 +148,6 @@ public class CoreConfig {
     private static void oreWeight(Configuration cfg) {
         cfg.addCustomCategoryComment(CATEGORY_WEIGHT_ORES, "where you can change the weight of ores that generate");
         weightCopper = cfg.getInt("copper weight", CATEGORY_WEIGHT_ORES, weightCopper, MIN_WEIGHT, MAX_WEIGHT, COMMENT_WEIGHT);
+        weightTin = cfg.getInt("tin weight", CATEGORY_WEIGHT_ORES, weightTin, MIN_WEIGHT, MAX_WEIGHT, COMMENT_WEIGHT);
     }
 }
