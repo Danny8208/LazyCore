@@ -69,15 +69,15 @@ public class CoreConfig {
     public static float resistanceTungstenBlock = 30;
 
     public static int maxYCopper = 70;
-    public static int maxYTin = 20;
+    public static int maxYTin = 55;
     public static int maxYTungsten = 0;
 
     public static int minYCopper = 10;
-    public static int minYTin = 55;
+    public static int minYTin = 20;
     public static int minYTungsten = 0;
 
     public static int chancesCopper = 10;
-    public static int chancesTin = 5;
+    public static int chancesTin = 1;
     public static int chancesTungsten = 0;
 
     public static int maxClumpCopper = 10;
@@ -94,7 +94,7 @@ public class CoreConfig {
 
     public static int weightCopper = 3;
     public static int weightTin = 2;
-    public static int weightTungsten = 0;
+    public static int weightTungsten = 1;
 
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
