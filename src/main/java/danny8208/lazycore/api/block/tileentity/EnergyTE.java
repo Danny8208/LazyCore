@@ -39,5 +39,4 @@ public class EnergyTE extends TileEntity implements ITickable {
         this.storage.receiveEnergy(receive, false);
         this.storage.extractEnergy(extract, false);
     }
-
 }
