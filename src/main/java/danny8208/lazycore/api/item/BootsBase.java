@@ -9,8 +9,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BootsBase extends ItemArmor {
-    public BootsBase(String modId, String name, CreativeTabs tab, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-        super(materialIn, renderIndexIn, equipmentSlotIn);
+    public BootsBase(String modId, String name, CreativeTabs tab, ArmorMaterial materialIn) {
+        super(materialIn, 0, EntityEquipmentSlot.FEET);
         setUnlocalizedName(modId + "." + name);
         setRegistryName(name);
         setCreativeTab(tab);

@@ -9,8 +9,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ChestplateBase extends ItemArmor {
-    public ChestplateBase(String modId, String name, CreativeTabs tab, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-        super(materialIn, renderIndexIn, equipmentSlotIn);
+    public ChestplateBase(String modId, String name, CreativeTabs tab, ArmorMaterial materialIn) {
+        super(materialIn, 0, EntityEquipmentSlot.CHEST);
         setUnlocalizedName(modId + "." + name);
         setRegistryName(name);
         setCreativeTab(tab);
