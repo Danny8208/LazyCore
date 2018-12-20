@@ -47,6 +47,14 @@ public class NormalRecipes {
         GameData.register_impl(recipe);
     }
 
+    public static void addCompressionRecipe(ItemStack compressed, Object... uncompressed) {
+        addShapelessRecipe(compressed, uncompressed);
+    }
+
+    public static void addUncompressionRecipe(ItemStack uncompressed, Object compressed) {
+        addShapelessRecipe(uncompressed, compressed);
+    }
+
     public static ResourceLocation getNameForRecipe(ItemStack output) {
         ModContainer activeContainer = Loader.instance().activeModContainer();
         ResourceLocation baseLoc = new ResourceLocation(activeContainer.getModId(), output.getItem().getRegistryName().getResourcePath());

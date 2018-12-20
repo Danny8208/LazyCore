@@ -1,6 +1,5 @@
 package danny8208.lazycore.common;
 
-import danny8208.lazycore.api.recipe.NormalRecipes;
 import danny8208.lazycore.common.block.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
 import danny8208.lazycore.common.world.CopperGen;
@@ -9,7 +8,6 @@ import danny8208.lazycore.common.world.TungstenGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,8 +27,6 @@ public class CommonProxy {
         File dir = e.getModConfigurationDirectory();
         config = new Configuration(new File(dir.getPath(), LazyCore.MOD_ID + ".cfg"));
         CoreConfig.readConfig();
-
-        NormalRecipes.addShapelessRecipe(new ItemStack(ModItems.nuggetTungsten, 9), "ingotTungsten");
 
         if(CoreConfig.enableCopperOreGen) GameRegistry.registerWorldGenerator(new CopperGen(), CoreConfig.weightCopper);
         if(CoreConfig.enableTinOreGen) GameRegistry.registerWorldGenerator(new TinGen(), CoreConfig.weightTin);

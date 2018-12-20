@@ -19,3 +19,5 @@ tile.steel_block.name=Steel Block
 tile.copper_ore.name=Copper Ore
 tile.tin_ore.name=Tin Block
 tile.tungsten_ore.name=Tungsten Ore
+
+itemGroup.lazycore=LazyCore
