@@ -1,4 +1,4 @@
-package danny8208.lazycore.common.block;
+package danny8208.lazycore.common.blocks;
 
 import danny8208.lazycore.common.LazyCore;
 import net.minecraftforge.fml.common.registry.GameRegistry;
