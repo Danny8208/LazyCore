@@ -1,4 +1,4 @@
-package danny8208.lazycore.common.block;
+package danny8208.lazycore.common.blocks;
 
 import danny8208.lazycore.api.block.BlockBase;
 import danny8208.lazycore.client.CoreTab;
