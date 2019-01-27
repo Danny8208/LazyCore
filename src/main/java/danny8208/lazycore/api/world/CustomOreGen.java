@@ -13,7 +13,7 @@ import java.util.Random;
 public class CustomOreGen implements IWorldGenerator {
     /*
     an example of overriding the generate methods will be something like this:
-    generateOre(ModBlocks.blocks.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, minY, maxY, minClusterSize + random.nextInt(maxClusterSize - minClusterSize), chances);
+    generateOre(ModBlocks.block.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, minY, maxY, minClusterSize + random.nextInt(maxClusterSize - minClusterSize), chances);
      */
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
