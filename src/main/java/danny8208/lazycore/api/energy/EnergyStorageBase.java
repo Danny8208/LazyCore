@@ -50,16 +50,16 @@ public class EnergyStorageBase extends EnergyStorage {
         }
 
         public void readFromNBT(NBTTagCompound compound) {
-            this.energy = compound.getInteger("energy");
-            this.capacity = compound.getInteger("capacity");
-            this.maxExtract = compound.getInteger("maxExtract");
-            this.maxReceive = compound.getInteger("maxReceive");
+            this.energy = compound.getInteger("Energy");
+            this.capacity = compound.getInteger("Capacity");
+            this.maxExtract = compound.getInteger("MaxExtract");
+            this.maxReceive = compound.getInteger("MaxReceive");
         }
 
         public void writeToNBT(NBTTagCompound compound) {
-            compound.setInteger("energy", this.energy);
-            compound.setInteger("capacity", this.capacity);
-            compound.setInteger("maxExtract", this.maxExtract);
-            compound.setInteger("maxReceive", this.maxReceive);
+            compound.setInteger("Energy", this.energy);
+            compound.setInteger("Capacity", this.capacity);
+            compound.setInteger("MaxExtract", this.maxExtract);
+            compound.setInteger("MaxReceive", this.maxReceive);
         }
 }

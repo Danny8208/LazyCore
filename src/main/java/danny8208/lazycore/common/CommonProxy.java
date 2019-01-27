@@ -1,7 +1,8 @@
 package danny8208.lazycore.common;
 
-import danny8208.lazycore.common.block.ModBlocks;
+import danny8208.lazycore.common.blocks.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
+import danny8208.lazycore.common.recipes.CraftingRecipes;
 import danny8208.lazycore.common.world.CopperGen;
 import danny8208.lazycore.common.world.TinGen;
 import danny8208.lazycore.common.world.TungstenGen;
@@ -38,6 +39,11 @@ public class CommonProxy {
         OreDict.ingotDict();
         OreDict.blockDict();
         OreDict.oreDict();
+
+        CraftingRecipes.smeltingRecipes();
+        CraftingRecipes.compressionRecipes();
+        CraftingRecipes.miscRecipes();
+        CraftingRecipes.uncompressionRecipes();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

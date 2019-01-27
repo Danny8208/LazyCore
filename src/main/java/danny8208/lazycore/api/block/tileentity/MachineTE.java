@@ -24,8 +24,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 
-import static net.minecraft.tileentity.TileEntityFurnace.getItemBurnTime;
-
 public class MachineTE extends TileEntity implements IInventory, ITickable {
     private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
     private String customName;

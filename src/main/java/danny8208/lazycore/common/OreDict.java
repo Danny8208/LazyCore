@@ -1,6 +1,6 @@
 package danny8208.lazycore.common;
 
-import danny8208.lazycore.common.block.ModBlocks;
+import danny8208.lazycore.common.blocks.ModBlocks;
 import danny8208.lazycore.common.items.ModItems;
 import net.minecraftforge.oredict.OreDictionary;
 

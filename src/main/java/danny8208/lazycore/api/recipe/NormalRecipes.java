@@ -47,10 +47,6 @@ public class NormalRecipes {
         GameData.register_impl(recipe);
     }
 
-    public static void addCompressionRecipe(ItemStack compressed, Object... uncompressed) {
-        addShapelessRecipe(compressed, uncompressed);
-    }
-
     public static void addUncompressionRecipe(ItemStack uncompressed, Object compressed) {
         addShapelessRecipe(uncompressed, compressed);
     }

@@ -1,6 +1,7 @@
 package danny8208.lazycore.api.container;
 
 import danny8208.lazycore.api.block.tileentity.MachineTE;
+import danny8208.lazycore.api.recipe.MachineRecipes;
 import danny8208.lazycore.api.slot.SlotMachineFuel;
 import danny8208.lazycore.api.slot.SlotMachineOutput;
 import net.minecraft.entity.player.EntityPlayer;
@@ -70,5 +71,48 @@ public class MachineContainer extends Container {
 
     @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
+        ItemStack stack = ItemStack.EMPTY;
+        Slot slot = (Slot)this.inventorySlots.get(index);
+
+        if(slot != null && slot.getHasStack()) {
+            ItemStack stack1 = slot.getStack();
+            stack = stack1.copy();
+
+            if(index == 3) {
+                if(!this.mergeItemStack(stack1, 4, 40, true)) return ItemStack.EMPTY;
+                slot.onSlotChange(stack1, stack);
+            }
+            else if (index != 2 && index != 1 && index != 0) {
+                Slot slot1 = (Slot)this.inventorySlots.get(index + 1);
+
+                if(!MachineRecipes.getInstance().getResult(stack1, slot1.getStack()).isEmpty()) {
+                    if(!this.mergeItemStack(stack1, 0, 2, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                    else if(MachineTE.isItemFuel(stack1)) {
+                        if(!this.mergeItemStack(stack1, 2, 3, false)) return ItemStack.EMPTY;
+                    }
+                    else if(MachineTE.isItemFuel(stack1)) {
+                        if(!this.mergeItemStack(stack1, 2, 3, false)) return ItemStack.EMPTY;
+                    }
+                    else if(index >= 4 && index < 31) {
+                        if(!this.mergeItemStack(stack1, 31, 40, false)) return ItemStack.EMPTY;
+                    }
+                    else if(index >= 31 && index < 40 && !this.mergeItemStack(stack1, 4, 31, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                }
+                else if(!this.mergeItemStack(stack1, 4, 40, false)) {
+                    return ItemStack.EMPTY;
+                }
+                if(stack1.isEmpty()) {
+                    slot.putStack(ItemStack.EMPTY);
+                }
+                else {
+                    slot.putStack(ItemStack.EMPTY);
+                }
+            }
+        }
+        return stack;
     }
 }

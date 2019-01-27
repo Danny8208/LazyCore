@@ -2,7 +2,7 @@ package danny8208.lazycore.common.world;
 
 import danny8208.lazycore.api.world.CustomOreGen;
 import danny8208.lazycore.common.CoreConfig;
-import danny8208.lazycore.common.block.ModBlocks;
+import danny8208.lazycore.common.blocks.ModBlocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
