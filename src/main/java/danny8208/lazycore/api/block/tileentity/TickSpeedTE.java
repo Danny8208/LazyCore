@@ -60,7 +60,6 @@ public class TickSpeedTE extends TileEntity implements ITickable {
 
                         if (curWaitTick == tickWait) {
                             block.updateTick(world, targetPos, targetBlockState, world.rand);
-                            block = null;
                         } else {
                             curWaitTick++;
                         }
