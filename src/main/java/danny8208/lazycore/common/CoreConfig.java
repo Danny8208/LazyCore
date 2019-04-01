@@ -10,14 +10,14 @@ public class CoreConfig {
     private static final String COMMENT_WEIGHT = "The weight of the ore, or where it is most commonly found";
 
     private static final String CATEGORY_ENABLE_ITEMS = "item enable";
-    private static final String CATEGORY_ENABLE_block = "block enable";
+    private static final String CATEGORY_ENABLE_BLOCKS = "block enable";
     private static final String CATEGORY_ENABLE_ORES = "ore enable";
     private static final String CATEGORY_ENABLE_ORE_GEN = "ore gen enable";
 
-    private static final String CATEGORY_HARDNESS_block = "block hardness";
+    private static final String CATEGORY_HARDNESS_BLOCKS = "block hardness";
     private static final String CATEGORY_HARDNESS_ORES = "ore hardness";
 
-    private static final String CATEGORY_RESISTANCE_block = "block resistance";
+    private static final String CATEGORY_RESISTANCE_BLOCKS = "block resistance";
     private static final String CATEGORY_RESISTANCE_ORES = "ore resistance";
 
     private static final String CATEGORY_WEIGHT_ORES = "ore weight";
@@ -136,7 +136,7 @@ public class CoreConfig {
         enableTungstenNugget = cfg.getBoolean("tungsten nugget", CATEGORY_ENABLE_ITEMS, enableTungstenNugget, COMMENT_ENABLE);
     }
     private static void enableblock(Configuration cfg) {
-        cfg.addCustomCategoryComment(CATEGORY_ENABLE_block, "where you can enable block");
+        cfg.addCustomCategoryComment(CATEGORY_ENABLE_block, "where you can enable blocks");
         enableCopperBlock = cfg.getBoolean("copper block", CATEGORY_ENABLE_block, enableCopperBlock, COMMENT_ENABLE);
         enableTinBlock = cfg.getBoolean("tin block", CATEGORY_ENABLE_block, enableTinBlock, COMMENT_ENABLE);
         enableBronzeBlock = cfg.getBoolean("bronze block", CATEGORY_ENABLE_block, enableBronzeBlock, COMMENT_ENABLE);
@@ -157,7 +157,7 @@ public class CoreConfig {
     }
 
     private static void hardnessblock(Configuration cfg) {
-        cfg.addCustomCategoryComment(CATEGORY_HARDNESS_block, "where you can change hardness of block");
+        cfg.addCustomCategoryComment(CATEGORY_HARDNESS_block, "where you can change hardness of blocks");
         hardnessCopperBlock = cfg.getFloat("copper block hardness", CATEGORY_HARDNESS_block, hardnessCopperBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_HARDNESS);
         hardnessTinBlock = cfg.getFloat("tin block hardness", CATEGORY_HARDNESS_block, hardnessTinBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_HARDNESS);
         hardnessBronzeBlock = cfg.getFloat("bronze block hardness", CATEGORY_HARDNESS_block, hardnessBronzeBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_HARDNESS);
@@ -172,7 +172,7 @@ public class CoreConfig {
     }
 
     private static void resistanceblock(Configuration cfg) {
-        cfg.addCustomCategoryComment(CATEGORY_RESISTANCE_block, "where you can change resistance of block");
+        cfg.addCustomCategoryComment(CATEGORY_RESISTANCE_block, "where you can change resistance of blocks");
         resistanceCopperBlock = cfg.getFloat("copper ore resistance", CATEGORY_RESISTANCE_block, resistanceCopperBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_RESISTANCE);
         resistanceTinBlock = cfg.getFloat("tin block resistance", CATEGORY_RESISTANCE_block, resistanceTinBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_RESISTANCE);
         resistanceBronzeBlock = cfg.getFloat("bronze block resistance", CATEGORY_RESISTANCE_block, resistanceBronzeBlock, Integer.MIN_VALUE, Integer.MAX_VALUE, COMMENT_RESISTANCE);
